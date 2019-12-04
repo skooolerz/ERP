@@ -1,13 +1,29 @@
 const express = require('express')
 
+var model = require('./model.js')
+
+var db = model.getDb()
+
 const router = express.Router()
 
-router.get('/invite',function(req,res){
+router.get('/welcome',function(req,res){
     res.send('Hi welcome who would you want to invite')
 })
 
 router.get('/guru',function(req,res){
-    res.send('Hi you invited guru , his wife should also be invited')
+
+    
+    
+    db.collection('slide_bar').find().toArray(function(err,result){
+
+        if(err){
+            throw err
+        }
+        console.log(result)
+        res.header('Access-Control-Allow-Origin', '*');
+        res.send(result)
+    })
+    
 })
 
 router.get('/vishnu',function(req,res){
