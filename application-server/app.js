@@ -6,9 +6,14 @@ const MongoConnect = require('mongodb').MongoClient;
 
 const controller = require('./controller/controller.js')
 const gallery = require('./controller/gallery.js')
-// const home = require('./controller/home.js')
+const slider = require('./controller/slider.js')
+const contactus = require('./controller/contactus.js')
+
+
+
 const common_config = require('./config/server_config.json')
 var model =  require('./model.js')
+
 
 
 var dir = path.join(__dirname, 'public');
@@ -16,9 +21,12 @@ var dir = path.join(__dirname, 'public');
 app.use(cors());
 app.use(express.static(dir));
 
+
 app.use('/',controller)
+app.use('/slider',slider)
 app.use('/gallery',gallery)
-// app.use('/home',home)
+app.use('/contactus',contactus)
+
 
 MongoConnect.connect(common_config.mongo_URL, function (err, client) {
     
@@ -32,7 +40,6 @@ MongoConnect.connect(common_config.mongo_URL, function (err, client) {
 })
 
 
-module.exports = app.locals.db
 
 
 

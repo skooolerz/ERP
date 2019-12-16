@@ -1,27 +1,90 @@
 const express = require('express')
 const router = express.Router()
-// const fs = require('fs')
+const fs = require('fs')  
+const glob = require('glob')       
 
 
-const invitation = require('../users/school_invitation.js')
-var model = require('../model.js')
+router.get('/allData',function(req,res){
 
-router.get('/welcome',function(req,res){
-    res.send('API is working fine')
+    console.log('other pages')
+    
+    
+    db=req.app.locals.db
+    var data={}
+    var path = '/home/guruvayurappan/Documents/ERP/application-server/public'
+
+
+    // gallery - getimage
+    async function getImages(path) 
+    {
+        return new Promise(function(resolve,reject) 
+        {
+            var response;
+            var arr=[]
+            glob(path, function( err, files ) 
+            {
+                files.forEach(element => 
+                { 
+                    arr.push(fs.readFileSync(element, 'base64'))
+                })
+            }) 
+
+
+            db.collection('gallery_image').find({}).project({_id:0}).toArray(function(err, results) 
+            {
+                    results.forEach(function (record, index)
+                    {
+                        record['url']=arr[index]
+                    })
+
+                    resolve(results)                    
+            })
+        })
+        
+    }
+
+    async function getVideos() 
+    {
+        return new Promise(function(resolve,reject) 
+        {
+            db.collection('gallery_video').find({}).project({_id:0}).toArray(function(err, results) 
+            {
+                resolve(results)
+            })
+        })
+    }
+
+    async function getAddress() 
+    {
+        return new Promise(function(resolve,reject) 
+        {
+            db.collection('contactus_address').find({}).project({_id:0}).toArray(function(err, results) 
+            {
+                resolve(results)
+            })
+        })
+    }
+
+    async function getAllData() {
+        let result={}
+        let data={}
+        data['image'] = await getImages(path+'/gallery/*')
+        data['video'] = await getVideos()
+        result['gallery']=data
+        data={}
+        data['address'] = await getAddress()
+        result['contactUs']=data
+        res.send(result)
+    }
+
+    getAllData()
+
 })
 
-router.get('/first_step/:name',async function(req,res){
-    let params = req.params;
-    let res_send = {};
-    res_send.content = invitation[params.name]
-    res.json(res_send)
 
-    // fs.readdir(`./public/${params.name}`,(err,data)=>{
-    //     let res_send = {};
-    //     //res_send.images = data;
-    //     res_send.content = invitation[params.name]
-    //     res.json(res_send)
-    // })
-})
 
 module.exports = router
+
+
+
+

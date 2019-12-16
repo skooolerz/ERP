@@ -1,0 +1,14 @@
+check how many users can login
+mongo queries 
+check with 2GB and 4GB ram 
+
+
+disk space
+ram 
+storage 
+
+pricing - 150 - 200 dollar per month
+
+
+
+
