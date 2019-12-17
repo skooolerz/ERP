@@ -1,3 +1,14 @@
 # GET http://192.168.1.6:2020/first_step/bannari
 # GET http://192.168.1.6:2020/gallery/guru
 GET http://192.168.1.4:2020/gallery/image1.jpg
+###
+//Send SMS Test
+POST  http://192.168.1.18:2020/contact/sms
+content-type: application/json
+
+{
+    "account_id":123456,
+    "sender":"TXTLCL",
+    "message" : "Hello",
+    "number":"918220675811"
+}

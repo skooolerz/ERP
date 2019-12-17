@@ -2,6 +2,7 @@ const express = require('express')
 const router = express.Router()
 const fs = require('fs')  
 const glob = require('glob')       
+const model = require('../models/user_data')
 
 
 router.get('/allData',function(req,res){
@@ -81,6 +82,11 @@ router.get('/allData',function(req,res){
 
 })
 
+
+router.get('/allData',async (req,res)=>{
+    let data = req.query;
+    let response = await model.getAllDate(req.app.locals.db,data)
+})
 
 
 module.exports = router
