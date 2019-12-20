@@ -8,7 +8,7 @@ const MongoConnect = require('mongodb').MongoClient;
 // const controller = require('./controller/controller.js')
 // const gallery = require('./controller/gallery.js')
 // const slider = require('./controller/slider.js')
-const contact = require('./application-server/controller/contact.js')
+// const contact = require('./application-server/controller/contact.js')
 
 const port = process.env.PORT || 3000
 
@@ -31,7 +31,7 @@ const common_config = require('./application-server/config/server_config.json')
 // app.use('/',controller)
 // app.use('/slider',slider)
 // app.use('/gallery',gallery)
-app.use('/contact',contact)
+// app.use('/contact',contact)
 
 
 MongoConnect.connect(common_config.mongo_URL, function (err, client) {
@@ -47,18 +47,18 @@ MongoConnect.connect(common_config.mongo_URL, function (err, client) {
 // common_config.node_port
 
 
-// const http = require('http');
-// const port = process.env.PORT || 3000
+const http = require('http');
+const port = process.env.PORT || 3000
 
-// const server = http.createServer((req, res) => {
-//   res.statusCode = 200;
-//   res.setHeader('Content-Type', 'text/html');
-//   res.end('<h1>Hello World</h1>');
-// });
+const server = http.createServer((req, res) => {
+  res.statusCode = 200;
+  res.setHeader('Content-Type', 'text/html');
+  res.end('<h1>Hello World</h1>');
+});
 
-// server.listen(port,() => {
-//   console.log(`Server running at port `+port);
-// });
+server.listen(port,() => {
+  console.log(`Server running at port `+port);
+});
 
 
 // common_config.node_port
