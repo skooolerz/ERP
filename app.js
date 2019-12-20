@@ -2,7 +2,16 @@ const express = require('express')
 const app = express()
 // const cors = require('cors')
 // const path = require('path');
-const MongoConnect = require('mongodb').MongoClient;
+// const MongoConMongoConnect.connect(common_config.mongo_URL, function (err, client) {
+    
+//     if (err) console.log(err)
+//     else {
+//         app.locals.db = client.db('skoolerz');
+//         app.listen(port, '0.0.0.0', () => {
+//             console.log('Server is up and running on ' + port)
+//         })
+//     }
+// })nect = require('mongodb').MongoClient;
 // const body_parser = require('body-parser')
 
 // const controller = require('./controller/controller.js')
@@ -14,7 +23,7 @@ const port = process.env.PORT || 3000
 
 
 
-const common_config = require('./application-server/config/server_config.json')
+// const common_config = require('./application-server/config/server_config.json')
 // var model =  require('./model.js')
 
 
@@ -34,16 +43,17 @@ const common_config = require('./application-server/config/server_config.json')
 // app.use('/contact',contact)
 
 
-MongoConnect.connect(common_config.mongo_URL, function (err, client) {
+// MongoConnect.connect(common_config.mongo_URL, function (err, client) {
     
-    if (err) console.log(err)
-    else {
-        app.locals.db = client.db('skoolerz');
-        app.listen(port, '0.0.0.0', () => {
-            console.log('Server is up and running on ' + port)
-        })
-    }
-})
+//     if (err) console.log(err)
+//     else {
+//         app.locals.db = client.db('skoolerz');
+//         app.listen(port, '0.0.0.0', () => {
+//             console.log('Server is up and running on ' + port)
+//         })
+//     }
+// })
+
 // common_config.node_port
 
 
