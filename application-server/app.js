@@ -10,6 +10,8 @@ const gallery = require('./controller/gallery.js')
 const slider = require('./controller/slider.js')
 const contact = require('./controller/contact.js')
 
+const port = process.env.PORT || 2020
+
 
 
 const common_config = require('./config/server_config.json')
@@ -37,7 +39,7 @@ MongoConnect.connect(common_config.mongo_URL, function (err, client) {
     if (err) console.log(err)
     else {
         app.locals.db = client.db('erp');
-        app.listen(common_config.node_port, '0.0.0.0', () => {
+        app.listen(port, '0.0.0.0', () => {
             console.log('Server is up and running on ' + common_config.node_port)
         })
     }
@@ -45,7 +47,7 @@ MongoConnect.connect(common_config.mongo_URL, function (err, client) {
 
 
 
-
+// common_config.node_port
 
 
 
