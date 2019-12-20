@@ -19,7 +19,6 @@ const app = express()
 // const slider = require('./controller/slider.js')
 // const contact = require('./application-server/controller/contact.js')
 
-const port = process.env.PORT || 3000
 
 
 
