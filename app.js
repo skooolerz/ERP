@@ -23,7 +23,7 @@ const contact = require('./application-server/controller/contact.js')
 
 const port = process.env.PORT || 3000
 
-const mongo_URL = process.env.PORT || "mongodb+srv://Guru:Welcome$1@skoolerz-dnkoj.mongodb.net/test?retryWrites=true&w=majority"
+const mongo_URL = process.env.MONGODB_URI || "mongodb+srv://Guru:Welcome$1@skoolerz-dnkoj.mongodb.net/test?retryWrites=true&w=majority"
 
 
 const common_config = require('./application-server/config/server_config.json')
