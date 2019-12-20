@@ -23,6 +23,7 @@ const contact = require('./application-server/controller/contact.js')
 
 const port = process.env.PORT || 3000
 
+const mongo_URL = process.env.PORT || "mongodb+srv://Guru:Welcome$1@skoolerz-dnkoj.mongodb.net/test?retryWrites=true&w=majority"
 
 
 const common_config = require('./application-server/config/server_config.json')
@@ -45,7 +46,7 @@ const common_config = require('./application-server/config/server_config.json')
 app.use('/contact',contact)
 
 
-MongoConnect.connect(common_config.mongo_URL,{ useUnifiedTopology:true }, function (err, client) {
+MongoConnect.connect(mongo_URL,{ useUnifiedTopology:true }, function (err, client) {
     
     if (err) console.log(err)
     else {
