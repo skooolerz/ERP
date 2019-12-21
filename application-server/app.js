@@ -34,7 +34,7 @@ app.use('/gallery',gallery)
 app.use('/contact',contact)
 
 
-MongoConnect.connect(common_config.mongo_URL, function (err, client) {
+MongoConnect.connect(common_config.mongo_URL,{ useUnifiedTopology: true }, function (err, client) {
     
     if (err) console.log(err)
     else {
