@@ -38,7 +38,7 @@ MongoConnect.connect(common_config.mongo_URL,{ useUnifiedTopology: true }, funct
     
     if (err) console.log(err)
     else {
-        app.locals.db = client.db('erp');
+        app.locals.db = client.db('ERP');
         app.listen(common_config.node_port, '0.0.0.0', () => {
             console.log('Server is up and running on ' + common_config.node_port)
         })

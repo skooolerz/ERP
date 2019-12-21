@@ -13,7 +13,6 @@ router.get('/sliderimages',(req,res)=>{
             arr.push(fs.readFileSync(element, 'base64'))
           }); 
         db=req.app.locals.db
-        console.log(db)
         db.collection('slider').find({}).project({_id:0}).toArray(function(err, results) {
             results.forEach(function (record, index){
                 record['src']= 'data:image/png;base64,'+arr[index]

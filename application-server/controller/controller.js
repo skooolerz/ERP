@@ -11,8 +11,7 @@ router.get('/allData',function(req,res){
     
     
     db=req.app.locals.db
-    var data={}
-    var path = '/home/guruvayurappan/Documents/ERP1/application-server/public'
+    var path = '/home/guruvayurappan/Documents/ERP/application-server/public'
 
 
     // gallery - getimage
@@ -37,7 +36,6 @@ router.get('/allData',function(req,res){
                     {
                         record['url']=arr[index]
                     })
-                    console.log(results)
 
                     resolve(results[0])                    
             })
@@ -66,7 +64,6 @@ router.get('/allData',function(req,res){
                     {
                         record['url']=arr[index]
                     })
-                    console.log(results)
 
 
                     resolve(results)                    
