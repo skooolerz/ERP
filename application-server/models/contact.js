@@ -7,3 +7,9 @@ exports.sms = async function (connnection, data) {
     let result = await sms.send_sms(data)
     console.log(result)
 }
+
+//Get feedBack 
+exports.GetFeedback = async function(connection,data){
+    let resp = await connection.collection('feedback').updateOne({account_id : 123456},{$push:{feedBack:data}})
+    return 200
+}

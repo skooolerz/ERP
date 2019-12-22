@@ -14,3 +14,12 @@ content-type: application/json
     "message" : "Hello",
     "number":"918220675811"
 }
+###
+//Get Feedback 
+POST http://192.168.1.9:2020/contact/GetFeedback
+content-type: application/json
+
+{
+    "name":"hari",
+    "email":"hari@g.in"
+}

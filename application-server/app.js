@@ -6,8 +6,6 @@ const MongoConnect = require('mongodb').MongoClient;
 const body_parser = require('body-parser')
 
 const controller = require('./controller/controller.js')
-const gallery = require('./controller/gallery.js')
-const slider = require('./controller/slider.js')
 const contact = require('./controller/contact.js')
 
 // const port = process.env.PORT || 2020
@@ -35,8 +33,6 @@ app.use(express.static(dir));
 
 
 app.use('/', controller)
-app.use('/slider', slider)
-app.use('/gallery', gallery)
 app.use('/contact', contact)
 
 
