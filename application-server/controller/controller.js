@@ -11,11 +11,6 @@ router.get('/allData', async (req, res) => {
     galleryArray.header = await model.headerArray(req.app.locals.db, data);
     let contact =  await model.contactArray(req.app.locals.db, data);
     let aboutUs = await model.aboutUs(req.app.locals.db, data);
-    // let resSend = {
-
-    //     aboutUs :aboutUs,
-    //     status : 200
-    // }
     let resSend = {
         slider: sliderArray,
         gallery: galleryArray,
