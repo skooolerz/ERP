@@ -1,8 +1,9 @@
 {
     "mongo_URL": "mongodb://localhost:27017",
     "node_port": 2020,
-    "node_url": "http://192.168.1.9",
-    "slider_image_path": "/slider",
-    "gallery_image_path": "/gallery",
-    "header_image_path": "/gallery/header"
+    "node_url": "http://192.168.1.18",
+    "sliderImagePath": "/slider",
+    "galleryImagePath": "/gallery",
+    "headerImagePath": "/gallery/header",
+    "aboutUsPath" :"/aboutUs"
 }

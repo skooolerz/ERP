@@ -1,7 +1,7 @@
 const common = require('../config/server_config.json')
 
 //Get All Data for Slider
-exports.slider_image = async (connection, data) => {
+exports.sliderImage = async (connection, data) => {
     let res = await connection.collection('slider').find({
         account_id: 123456
     }, {
@@ -16,7 +16,7 @@ exports.slider_image = async (connection, data) => {
     }).toArray()
     let image_path = res[0].image.map((e) => {
         return ({
-            src: `${common.node_url}:${common.node_port}${common.slider_image_path}/${e.name}`,
+            src: `${common.node_url}:${common.node_port}${common.sliderImagePath}/${e.name}`,
             key: e.key,
             altText : e.altText,
             caption : e.caption,
@@ -27,7 +27,7 @@ exports.slider_image = async (connection, data) => {
 }
 
 //Get All Data for Gallery
-exports.gallery_image = async (connection, data) => {
+exports.galleryImage = async (connection, data) => {
     let res = await connection.collection('gallery').find({
         account_id: 123456
     }, {
@@ -41,7 +41,7 @@ exports.gallery_image = async (connection, data) => {
     }).toArray()
     let image_path = res[0].image.map((e) => {
         return ({
-            url: `${common.node_url}:${common.node_port}${common.gallery_image_path}/${e.name}`,
+            url: `${common.node_url}:${common.node_port}${common.galleryImagePath}/${e.name}`,
             position: e.position,
             title : e.title,
             subTitle : e.subtitle,
@@ -66,18 +66,42 @@ exports.gallery_image = async (connection, data) => {
 }
 
 //Get All Data for Header
-exports.header_array = async (connection, data) => {
+exports.headerArray = async (connection, data) => {
     let res = await connection.collection('header').find({
         account_id: 123456
     }).toArray()
     let image_path = res[0].image
-    image_path.url = `${common.node_url}:${common.node_port}${common.header_image_path}/${image_path.name}`
+    image_path.url = `${common.node_url}:${common.node_port}${common.headerImagePath}/${image_path.name}`
     image_path.title =  image_path.title;
     return image_path
 }
 
+exports.aboutUs = async (connection, data) => {
+    let res = await connection.collection('about_us').find({}).toArray()
+    console.log('entered')
+    
+
+    let image_path = res[0].image.map((e) => {
+    return ({
+            url: `${common.node_url}:${common.node_port}${common.aboutUsPath}/${e.name}`,
+            position: e.position,
+            entityTitle : e.entityTitle,
+            entitySubTitle : e.entitySubTitle,
+            content : e.content
+        })
+    })
+    let result={
+        'title':res[0].title,
+        'subTitle':res[0].subTitle,
+        'data':image_path
+    }
+    // console.log(result)
+
+    return result
+}
+
 //address
-exports.contact_array = async (connection, data) => {
+exports.contactArray = async (connection, data) => {
     let res = await connection.collection('contact_us').find({
         account_id: 123456
     }).toArray()

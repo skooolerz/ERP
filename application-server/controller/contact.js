@@ -20,6 +20,7 @@ router.get('/welcome1',(req,res)=>
     res.setHeader('Content-Type', 'text/html');
     res.end('<h1>Hello World</h1>');
 })
+
 // router.post('/sms',async (req,res)=>{
 //     let data = req.body;
 //     console.log(data)
