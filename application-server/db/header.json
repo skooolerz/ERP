@@ -1,0 +1,9 @@
+{
+    "account_id" : 123456,
+    "image" : {
+        "name" : "header.jpg",
+        "status" : "A",
+        "position" : 1,
+        "title" : "Header1"
+    }
+}

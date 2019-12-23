@@ -1,0 +1,53 @@
+{
+    "account_id" : 123456,
+    "image" : [ 
+        {
+            "name" : "slider1.jpg",
+            "status" : "A",
+            "key" : 1,
+            "altText" : "Image 1",
+            "caption" : "Slide 1",
+            "header" : "Slide 1 Header"
+        }, 
+        {
+            "name" : "slider2.jpg",
+            "status" : "A",
+            "key" : 2,
+            "altText" : "Image 1",
+            "caption" : "Slide 1",
+            "header" : "Slide 1 Header"
+        }, 
+        {
+            "name" : "slider3.jpg",
+            "status" : "A",
+            "key" : 3,
+            "altText" : "Image 1",
+            "caption" : "Slide 1",
+            "header" : "Slide 1 Header"
+        }, 
+        {
+            "name" : "slider4.jpg",
+            "status" : "A",
+            "key" : 4,
+            "altText" : "Image 1",
+            "caption" : "Slide 1",
+            "header" : "Slide 1 Header"
+        }, 
+        {
+            "name" : "slider5.jpg",
+            "status" : "A",
+            "key" : 5,
+            "altText" : "Image 1",
+            "caption" : "Slide 1",
+            "header" : "Slide 1 Header"
+        }, 
+        {
+            "name" : "slider6.jpg",
+            "status" : "A",
+            "key" : 6,
+            "altText" : "Image 1",
+            "caption" : "Slide 1",
+            "header" : "Slide 1 Header"
+        }
+    ]
+}

@@ -1,0 +1,55 @@
+{
+    "account_id" : 123456,
+    "address" : [ 
+        {
+            "header" : "We are here",
+            "schoolName" : "Sherwood Hall School",
+            "address" : "7, 13th Avenue, Harrington Road",
+            "city" : "Chennai",
+            "state" : "TamilNadu",
+            "country" : "India",
+            "zipCode" : "600031",
+            "emailId" : "emailId: sample@gmail.com",
+            "phoneNumber" : "Phone: 044-2836 5361",
+            "mapUrl" : "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31104.80171698462!2d80.22147062540743!3d12.965438783869187!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525d0cc0746497%3A0x1368df60472275ca!2sPerungudi%2C%20Chennai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1577010283184!5m2!1sen!2sin"
+        }, 
+        {
+            "header" : "Contact Info 1",
+            "schoolName" : "Sherwood Hall School",
+            "address" : "7, 13th Avenue, Harrington Road",
+            "city" : "Chennai",
+            "state" : "TamilNadu",
+            "country" : "India",
+            "zipCode" : "600031",
+            "emailId" : "emailId: sample@gmail.com",
+            "phoneNumber" : "Phone: 044-2836 5361",
+            "mapUrl" : "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31104.80171698462!2d80.22147062540743!3d12.965438783869187!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525d0cc0746497%3A0x1368df60472275ca!2sPerungudi%2C%20Chennai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1577010283184!5m2!1sen!2sin"
+        }, 
+        {
+            "header" : "Contact Info 1",
+            "schoolName" : "Sherwood Hall School",
+            "address" : "7, 13th Avenue, Harrington Road",
+            "city" : "Chennai",
+            "state" : "TamilNadu",
+            "country" : "India",
+            "zipCode" : "600031",
+            "emailId" : "emailId: sample@gmail.com",
+            "phoneNumber" : "Phone: 044-2836 5361",
+            "mapUrl" : "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31104.80171698462!2d80.22147062540743!3d12.965438783869187!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525d0cc0746497%3A0x1368df60472275ca!2sPerungudi%2C%20Chennai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1577010283184!5m2!1sen!2sin"
+        }
+    ],
+    "socialMedia" : [ 
+        {
+            "title" : "Facebook",
+            "url" : "https://bitsathy.ac.in"
+        }, 
+        {
+            "title" : "Instagram",
+            "url" : "https://bitsathy.ac.in"
+        }, 
+        {
+            "title" : "Twitter",
+            "url" : "https://bitsathy.ac.in"
+        }
+    ]
+}
