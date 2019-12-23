@@ -8,7 +8,7 @@ const body_parser = require('body-parser')
 const controller = require('./controller/controller.js')
 const contact = require('./controller/contact.js')
 
-// const port = process.env.PORT || 2020
+const port = process.env.PORT || 2020
 
 
 
@@ -43,9 +43,9 @@ MongoConnect.connect(common_config.mongo_URL, {
 
     if (err) console.log(err)
     else {
-        app.locals.db = client.db('ERP');
-        app.listen(common_config.node_port, '0.0.0.0', () => {
-            console.log('Server is up and running on ' + common_config.node_port)
+        app.locals.db = client.db('skoolerz');
+        app.listen(port, '0.0.0.0', () => {
+            console.log('Server is up and running on ' + port)
         })
     }
 })
@@ -57,3 +57,7 @@ MongoConnect.connect(common_config.mongo_URL, {
 
 // common_config.node_port
 // "mongodb+srv://Guru:Welcome$1@skoolerz-dnkoj.mongodb.net/test?retryWrites=true&w=majority"
+// VBJZSKUE
+
+// 6169b329-b5b2-41f5-982d-3ca5c12fdb63
+// mongodb://localhost:27017"
