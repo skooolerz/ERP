@@ -1,0 +1,59 @@
+{
+    "account_id" : 123456,
+    "image" : [ 
+        {
+            "name" : "image1.jpg",
+            "status" : "A",
+            "position" : 1,
+            "title" : "Sample1",
+            "subtitle" : "Sub Sample1",
+            "type" : "image",
+            "redirectString" : "https://photos.google.com/share/AF1QipNv220FnWffGxZkwQ6HZR6L-Hdzu1fGDuMxjJdzbTbiulRHGgaDgiS5OxYQNWm7mA?key=a1ZYZG1Vd20wOTN4WDNkWjdDNzRzRzN5VTV6OWt3"
+        }, 
+        {
+            "name" : "image2.jpg",
+            "status" : "A",
+            "position" : 2,
+            "title" : "Sample2",
+            "subtitle" : "Sub Sample2",
+            "type" : "image",
+            "redirectString" : "https://photos.google.com/share/AF1QipMAPgTh7faIDsYKkUXThzh1JIBizzIgkC6CQKsyp_GYHHcT3if-VJ67LvLW2pvAeA?key=VllYQTZTZzkzdVNpWS1McHB6enJ6eHlhSjFqWWpn"
+        }, 
+        {
+            "name" : "image3.jpg",
+            "status" : "A",
+            "position" : 3,
+            "title" : "Sample3",
+            "subtitle" : "Sub Sample3",
+            "type" : "image",
+            "redirectString" : "https://photos.google.com/share/AF1QipMB2bXyjQpQ7BY-AzHaCPnLWTbmbFLVvCxKIfEkvrlXKuZL1BIAPwiTOWWxeAXhTA?key=N0x2Unh6V25mVnFtbWJxNDlrZThNZElkdXM1MWVR"
+        }, 
+        {
+            "name" : "image4.jpg",
+            "status" : "A",
+            "position" : 4,
+            "title" : "Sample4",
+            "subtitle" : "Sub Sample3",
+            "type" : "image",
+            "redirectString" : "https://photos.google.com/share/AF1QipMyDYo7-bF-lgmeqNb2YiuXva0lwwC1hkz_SVZ367dORWryTWr0J-4t-n5NEjQj3Q?key=V3F5YlBFNFV4OGhxX3NfTU1PRmE2d0dkQUViVHJR"
+        }
+    ],
+    "video" : [ 
+        {
+            "name" : "9pWrJM5nkl4",
+            "status" : "A",
+            "position" : 1,
+            "title" : "Sample4",
+            "subtitile" : "Sub Sample3",
+            "type" : "video"
+        }, 
+        {
+            "name" : "N5pP7k7qppE",
+            "status" : "A",
+            "position" : 2,
+            "title" : "Sample4",
+            "subtitile" : "Sub Sample3",
+            "type" : "video"
+        }
+    ]
+}
