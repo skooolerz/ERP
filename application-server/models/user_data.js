@@ -16,7 +16,8 @@ exports.sliderImage = async (connection, data) => {
     }).toArray()
     let image_path = res[0].image.map((e) => {
         return ({
-            src: `${common.node_url}:${common.node_port}${common.sliderImagePath}/${e.name}`,
+            // src: `${common.node_url}:${common.node_port}${common.sliderImagePath}/${e.name}`,
+            src: `${common.node_url}/${common.sliderImagePath}/${e.name}`,
             key: e.key,
             altText : e.altText,
             caption : e.caption,
@@ -41,7 +42,8 @@ exports.galleryImage = async (connection, data) => {
     }).toArray()
     let image_path = res[0].image.map((e) => {
         return ({
-            url: `${common.node_url}:${common.node_port}${common.galleryImagePath}/${e.name}`,
+            // url: `${common.node_url}:${common.node_port}${common.galleryImagePath}/${e.name}`,
+            url: `${common.node_url}/${common.galleryImagePath}/${e.name}`,
             position: e.position,
             title : e.title,
             subTitle : e.subtitle,
@@ -71,7 +73,8 @@ exports.headerArray = async (connection, data) => {
         account_id: 123456
     }).toArray()
     let image_path = res[0].image
-    image_path.url = `${common.node_url}:${common.node_port}${common.headerImagePath}/${image_path.name}`
+    // image_path.url = `${common.node_url}:${common.node_port}${common.headerImagePath}/${image_path.name}`
+    image_path.url = `${common.node_url}/${common.headerImagePath}/${image_path.name}`
     image_path.title =  image_path.title;
     return image_path
 }
@@ -83,7 +86,8 @@ exports.aboutUs = async (connection, data) => {
 
     let image_path = res[0].image.map((e) => {
     return ({
-            url: `${common.node_url}:${common.node_port}${common.aboutUsPath}/${e.name}`,
+            // url: `${common.node_url}:${common.node_port}${common.aboutUsPath}/${e.name}`,
+            url: `${common.node_url}/${common.aboutUsPath}/${e.name}`,
             position: e.position,
             entityTitle : e.entityTitle,
             entitySubTitle : e.entitySubTitle,
