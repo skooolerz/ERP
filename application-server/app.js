@@ -37,7 +37,7 @@ app.use('/contact', contact)
 
 
 
-MongoConnect.connect(common_config.mongo_URL,{ useNewUrlParser: true } ,{
+MongoConnect.connect(common_config.MONGODB_URL,{ useNewUrlParser: true,useUnifiedTopology: true} ,{
     useUnifiedTopology: true
 }, function (err, client) {
 

@@ -1,5 +1,5 @@
 {
-    "mongo_URL": "mongodb+srv://Guru:Welcome$1@skoolerz-dnkoj.mongodb.net/test?retryWrites=true&w=majority",
+    "MONGODB_URL": "mongodb+srv://Guru:Welcome$1@skoolerz-dnkoj.mongodb.net/test?retryWrites=true&w=majority",
     "node_port": 2020,
     "node_url": "http://192.168.1.18",
     "sliderImagePath": "/slider",
