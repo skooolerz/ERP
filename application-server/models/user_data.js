@@ -98,7 +98,7 @@ exports.aboutUs = async (connection, data) => {
     let result={
         'title':res[0].title,
         'subTitle':res[0].subTitle,
-        'headerImageUrl':`${common.node_url}/${common.aboutUsPath}/${res[0].headerImageUrl}`,
+        'headerImageUrl':`${common.node_url}/${common.aboutUsHeaderPath}/${res[0].headerImageUrl}`,
         'data':image_path
     }
 
