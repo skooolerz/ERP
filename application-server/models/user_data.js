@@ -94,12 +94,13 @@ exports.aboutUs = async (connection, data) => {
             content : e.content
         })
     })
+
     let result={
         'title':res[0].title,
         'subTitle':res[0].subTitle,
+        'headerImageUrl':res[0].headerImageUrl,
         'data':image_path
     }
-    // console.log(result)
 
     return result
 }

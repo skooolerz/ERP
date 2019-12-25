@@ -5,6 +5,7 @@
     "sliderImagePath": "/slider",
     "galleryImagePath": "/gallery",
     "headerImagePath": "/gallery/header",
-    "aboutUsPath" :"/aboutUs"
+    "aboutUsPath" :"/aboutUs",
+    "aboutUsHeaderPath":"/aboutUs/header"
 }
 
