@@ -101,7 +101,7 @@ exports.aboutUs = async (connection, data) => {
         'headerImageUrl':`${common.node_url}/${common.aboutUsHeaderPath}/${res[0].headerImageUrl}`,
         'data':image_path
     }
-
+    
     return result
 }
 
