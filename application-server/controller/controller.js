@@ -18,8 +18,9 @@ router.get('/allData', async (req, res) => {
         aboutUs:aboutUs,
         contactUs: {
             address :contact.address,
-        socialMedia : contact.social
+            socialMedia : contact.social
         },
+        intro : contact.intro,
         status: 200
     }
     res.json(resSend)
