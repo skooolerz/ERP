@@ -31,7 +31,7 @@ router.post('/upload_slider_image',upload_model.slider_upload_api_image,async (r
         name : req.file.filename,
         key : req.body.key
     }
-    let result = model.upload_slider(req.app.locals.db,data)
+    let result = model.upload_slider_photo(req.app.locals.db,data)
     if(result==200){
         res.json({message:"Slider Image Uploaded",status: 200})
     }
@@ -39,13 +39,7 @@ router.post('/upload_slider_image',upload_model.slider_upload_api_image,async (r
 
 //Upload Slider Content
 router.post('/upload_slider_content',async(req,res)=>{
-    let data = {
-        key : parseInt(data.key),
-        altText : data.altText,
-        caption : data.caption,
-        header : data.header
-    }
-    let result = model.upload_slider(req.app.locals.db,data)
+    let result = model.upload_slider_content(req.app.locals.db,data)
     if(result==200){
         res.json({message:"Slider Content Uploaded",status: 200})
     }

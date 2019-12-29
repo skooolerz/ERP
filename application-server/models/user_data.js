@@ -115,7 +115,22 @@ exports.contactArray = async (connection, data) => {
 }
 
 //Slider Upload 
-exports.upload_slider = async(connection,data)=>{
-    let res = await connection.collection('slider').updateOne({account_id:123456},{$push:{image:data}})
+exports.upload_slider_photo = async(connection,data)=>{
+    if(data.purpose=='edit'){
+        let res = await connection.collection('slider').updateOne({account_id:123456,"image.key":parseInt(data.key)},{$set:{"image.$.name":data.name}})
+    }else{
+        let res = await connection.collection('slider').updateOne({account_id:123456},{$push:{image:data}})
+    }
+    return 200
+}
+
+//Slider Upload content
+exports.upload_slider_content = async(connection,data)=>{
+    let insert_data = {
+        "image.$.altText" : data.altText,
+        "image.$.caption" : data.caption,
+        "image.$.header" : data.header
+    }
+    let res = await connection.collection('slider').updateOne({account_id:123456,"image.key":parseInt(data.key)},{$set:insert_data})
     return 200
 }
