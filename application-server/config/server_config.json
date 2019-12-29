@@ -1,5 +1,5 @@
 {
-    "MONGODB_URL":"mongodb://localhost:27017",
+    "MONGODB_URL": "mongodb+srv://Guru:Welcome$1@skoolerz-dnkoj.mongodb.net/test?retryWrites=true&w=majority",
     "node_port": 2020,
     "node_url": "https://skoolerz.herokuapp.com",
     "sliderImagePath": "/slider",
