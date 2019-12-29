@@ -43,7 +43,7 @@ MongoConnect.connect(common_config.MONGODB_URL,{ useNewUrlParser: true,useUnifie
 
     if (err) console.log(err)
     else {
-        app.locals.db = client.db('ERP');
+        app.locals.db = client.db('skoolerz');
         app.listen(port, '0.0.0.0', () => {
             console.log('Server is up and running on ' + port)
         })
