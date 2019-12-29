@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"node ./application-server/app.js"
+    "start": "node ./application-server/app.js"
   },
   "repository": {
     "type": "git",
@@ -25,6 +25,7 @@
     "glob": "^7.1.6",
     "mongodb": "^3.3.5",
     "mongoose": "^5.7.13",
+    "multer": "^1.4.2",
     "request": "^2.88.0",
     "supervisor": "^0.12.0"
   }
