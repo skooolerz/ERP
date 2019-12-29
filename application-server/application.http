@@ -1,4 +1,4 @@
-GET http://192.168.1.9:2020/allData
+GET http://192.168.43.153:2020/allData
 
 ###
 # GET http://192.168.1.6:2020/gallery/guru

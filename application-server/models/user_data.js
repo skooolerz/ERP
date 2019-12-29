@@ -17,7 +17,7 @@ exports.sliderImage = async (connection, data) => {
     let image_path = res[0].image.map((e) => {
         return ({
             // src: `${common.node_url}:${common.node_port}${common.sliderImagePath}/${e.name}`,
-            src: `${common.node_url}/${common.sliderImagePath}/${e.name}`,
+            src: `${common.node_url}${common.sliderImagePath}/${e.name}`,
             key: e.key,
             altText : e.altText,
             caption : e.caption,
@@ -43,7 +43,7 @@ exports.galleryImage = async (connection, data) => {
     let image_path = res[0].image.map((e) => {
         return ({
             // url: `${common.node_url}:${common.node_port}${common.galleryImagePath}/${e.name}`,
-            url: `${common.node_url}/${common.galleryImagePath}/${e.name}`,
+            url: `${common.node_url}${common.galleryImagePath}/${e.name}`,
             position: e.position,
             title : e.title,
             subTitle : e.subtitle,
@@ -74,20 +74,17 @@ exports.headerArray = async (connection, data) => {
     }).toArray()
     let image_path = res[0].image
     // image_path.url = `${common.node_url}:${common.node_port}${common.headerImagePath}/${image_path.name}`
-    image_path.url = `${common.node_url}/${common.headerImagePath}/${image_path.name}`
+    image_path.url = `${common.node_url}${common.headerImagePath}/${image_path.name}`
     image_path.title =  image_path.title;
     return image_path
 }
 
 exports.aboutUs = async (connection, data) => {
     let res = await connection.collection('about_us').find({}).toArray()
-    console.log('entered')
-    
-
     let image_path = res[0].image.map((e) => {
     return ({
             // url: `${common.node_url}:${common.node_port}${common.aboutUsPath}/${e.name}`,
-            url: `${common.node_url}/${common.aboutUsPath}/${e.name}`,
+            url: `${common.node_url}${common.aboutUsPath}/${e.name}`,
             position: e.position,
             entityTitle : e.entityTitle,
             entitySubTitle : e.entitySubTitle,
@@ -98,7 +95,7 @@ exports.aboutUs = async (connection, data) => {
     let result={
         'title':res[0].title,
         'subTitle':res[0].subTitle,
-        'headerImageUrl':`${common.node_url}/${common.aboutUsHeaderPath}/${res[0].headerImageUrl}`,
+        'headerImageUrl':`${common.node_url}${common.aboutUsHeaderPath}/${res[0].headerImageUrl}`,
         'data':image_path
     }
     
@@ -118,14 +115,7 @@ exports.contactArray = async (connection, data) => {
 }
 
 //Slider Upload 
-exports.upload_slider_content = async(connection,data)=>{
-    let insert_data = {
-        name : data.image_name,
-        key : parseInt(data.key),
-        altText : data.altText,
-        caption : data.caption,
-        header : data.header
-    }
-    let res = await connection.collection('slider').updateOne({account_id:123456},{$push:{image:insert_data}})
+exports.upload_slider = async(connection,data)=>{
+    let res = await connection.collection('slider').updateOne({account_id:123456},{$push:{image:data}})
     return 200
 }
