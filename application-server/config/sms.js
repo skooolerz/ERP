@@ -2,7 +2,7 @@ const request = require('request')
 
 exports.send_sms = function(data){
     return new Promise(async(resolve,reject)=>{
-        let url = `https://api.textlocal.in/send/?apikey=${data.apiKey}&number=${data.number}&message=${data.message}&sender=${data.sender}`
+        let url = `https://api.textlocal.in/send/?apikey=${data.apiKey}&numbers=${data.number}&message=${data.message}&sender=${data.sender}`
         options = {
             method: 'GET',
             url: url,
