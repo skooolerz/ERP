@@ -118,7 +118,7 @@ exports.contactArray = async (connection, data) => {
 }
 
 //Slider Upload 
-exports.upload_slider = async(connection,data)=>{
+exports.upload_slider_content = async(connection,data)=>{
     let insert_data = {
         name : data.image_name,
         key : parseInt(data.key),

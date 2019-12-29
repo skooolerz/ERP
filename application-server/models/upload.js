@@ -14,7 +14,7 @@ let slider_upload = multer({
     storage: slider_storage
 }).single('image')
 
-exports.slider_upload_api = function (req, res, next) {
+exports.slider_upload_api_image = function (req, res, next) {
     slider_upload(req,res,(err)=>{
         if(err instanceof multer.MulterError){
             console.log("Error while uploading",err)

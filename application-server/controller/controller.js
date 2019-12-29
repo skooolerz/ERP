@@ -25,12 +25,17 @@ router.get('/allData', async (req, res) => {
     res.json(resSend)
 })
 
-router.post('/upload_slider',upload_model.slider_upload_api,async (req,res)=>{
+//Upload Slider Image
+router.post('/upload_slider_image',upload_model.slider_upload_api_image,async (req,res)=>{
+    res.json({message:"Slider Image Uploaded",status: 200})
+})
+
+//Upload Slider Content
+router.post('/upload_slider_content',async(req,res)=>{
     let data = req.body;
-    data.image_name = req.file.filename
-    let result =await model.upload_slider(req.app.locals.db,data)
+    let result = model.upload_slider_content(req.app.locals.db,data)
     if(result==200){
-        res.json({message:"Slider Uploaded",status: 200})
+        res.json({message:"Slider Content Uploaded",status: 200})
     }
 })
 
