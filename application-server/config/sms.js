@@ -10,7 +10,7 @@ exports.send_sms = function(data){
         };
         console.log(options)
         request.get(options, function (error, response,body) {
-            if (error) {console.log(error);winston_config.error(error)}
+            if (error) {console.log(error);}
             else {
                 // console.log(response)
                 resolve(response.body)

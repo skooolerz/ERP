@@ -21,11 +21,11 @@ router.get('/welcome1',(req,res)=>
     res.end('<h1>Hello World</h1>');
 })
 
-// router.post('/sms',async (req,res)=>{
-//     let data = req.body;
-//     console.log(data)
-//     let response = await model.sms(req.app.locals.db,data) 
-// })
+router.post('/sms',async (req,res)=>{
+    let data = req.body;
+    console.log(data)
+    let response = await model.sms(req.app.locals.db,data) 
+})
 
 //Get Feedback 
 router.post('/GetFeedback',[
