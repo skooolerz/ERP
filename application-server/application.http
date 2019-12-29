@@ -23,3 +23,8 @@ content-type: application/json
     "name":"hari",
     "email":"hari@g.in"
 }
+
+###
+//Image Upload
+POST http://192.168.43.153:2020/upload_slider
+content-type: application/json

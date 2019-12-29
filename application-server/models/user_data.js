@@ -116,3 +116,16 @@ exports.contactArray = async (connection, data) => {
     }
     return result
 }
+
+//Slider Upload 
+exports.upload_slider = async(connection,data)=>{
+    let insert_data = {
+        name : data.image_name,
+        key : parseInt(data.key),
+        altText : data.altText,
+        caption : data.caption,
+        header : data.header
+    }
+    let res = await connection.collection('slider').updateOne({account_id:123456},{$push:{image:insert_data}})
+    return 200
+}

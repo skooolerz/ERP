@@ -36,14 +36,14 @@ app.use('/', controller)
 app.use('/contact', contact)
 
 
-
+// "MONGODB_URL": "mongodb+srv://Guru:Welcome$1@skoolerz-dnkoj.mongodb.net/test?retryWrites=true&w=majority",
 MongoConnect.connect(common_config.MONGODB_URL,{ useNewUrlParser: true,useUnifiedTopology: true} ,{
     useUnifiedTopology: true
 }, function (err, client) {
 
     if (err) console.log(err)
     else {
-        app.locals.db = client.db('skoolerz');
+        app.locals.db = client.db('ERP');
         app.listen(port, '0.0.0.0', () => {
             console.log('Server is up and running on ' + port)
         })
