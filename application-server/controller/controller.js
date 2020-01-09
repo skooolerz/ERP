@@ -18,7 +18,8 @@ router.get('/allData', async (req, res) => {
         aboutUs:aboutUs,
         contactUs: {
             address :contact.address,
-            socialMedia : contact.social
+            socialMedia : contact.social,
+            feedBack : contact.feedBack
         },
         intro : contact.intro,
         status: 200
