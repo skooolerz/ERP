@@ -110,9 +110,13 @@ exports.contactArray = async (connection, data) => {
     let result = {
         address : res[0].address,
         social : res[0].socialMedia,
+        feedback : res[0].feedback,
         intro : res[0].intro
     }
-    result.intro.image = `${common.node_url}${common.aboutUsPath}/${result.intro.image}`
+    result.intro.image = `${common.node_url}${common.aboutUsPath}/${result.intro.image}`,
+    result.feedback.image = `${common.node_url}${common.contactUsPath}/${result.feedback.image}`,
+    result.feedback.backgroundImage = `${common.node_url}${common.contactUsPath}/${result.feedback.backgroundImage}`
+
     return result
 }
 

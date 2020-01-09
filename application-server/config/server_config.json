@@ -6,6 +6,7 @@
     "galleryImagePath": "/gallery",
     "headerImagePath": "/gallery/header",
     "aboutUsPath" :"/aboutUs",
-    "aboutUsHeaderPath":"/aboutUs/header"
+    "aboutUsHeaderPath":"/aboutUs/header",
+    "contactUsPath":"/contactUs"
 }
 
